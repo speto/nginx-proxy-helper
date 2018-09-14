@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+#  nginx:
+  project_nginx:
+    container_name: project_nginx_1
+    image: nginx:alpine
+    volumes:
+      - ./html/project.html:/usr/share/nginx/html/index.html:ro
+    environment:
+      - VIRTUAL_HOST=project.localhost

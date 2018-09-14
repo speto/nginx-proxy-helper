@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+#  nginx:
+  symfony-demo_nginx:
+    container_name: symfony-demo_nginx_1
+    image: nginx:alpine
+    volumes:
+    - ./html/symfony-demo.html:/usr/share/nginx/html/index.html:ro
+    environment:
+    - VIRTUAL_HOST=symfony-demo.localhost
